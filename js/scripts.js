@@ -58,6 +58,9 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-$(document).on('click', '#portfolio', function(){
-    console.log("123")
+var myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
+
+$(document).on('click', '.portfolio-box', function(){
+    myModal.show();
+    $('#exampleModal').find('#exampleModalLabel').html($(this).find('.project-name').text())
 })
